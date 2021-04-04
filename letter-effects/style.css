@@ -1,0 +1,32 @@
+
+.overflow1 {
+  white-space: nowrap; 
+  /* üres karaktereknél nem vágja el a szöveget */
+  width: 200px;
+  border: 1px solid black;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.overflow2 {
+  white-space: nowrap; 
+  /* üres karaktereknél nem vágja el a szöveget */
+  width: 200px;
+  border: 1px solid black;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* ...-el zárja le, ami még látszik a szövegből, a többit levágja */
+}
+
+p.wrap {
+  width: 11em;
+  border: 1px solid black;
+  word-break: keep-all;
+  /* eltörje-e a szavakat */
+}
+
+p.world-break-1 {
+  width: 140px;
+  border: 1px solid black;
+  word-break: keep-all;
+}

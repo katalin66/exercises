@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  text-align: center;
+}
+
+.stars .fa-star {
+  color: gold;
+  font-size: 2em;
+  text-shadow: 0 0 2px #f00;
+  width: 2em;
+  line-height: 2em;
+  cursor: pointer;
+}
