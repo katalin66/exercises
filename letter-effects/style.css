@@ -30,3 +30,17 @@ p.world-break-1 {
   border: 1px solid black;
   word-break: keep-all;
 }
+
+p.world-break-2 {
+  width: 140px;
+  border: 1px solid black;
+  word-break: break-all;
+}
+
+p.writing-mode-1 {
+  writing-mode: horizontal-tb;
+}
+
+span.writing-mode-2, p.writing-mode-2 {
+  writing-mode: vertical-lr;
+}
