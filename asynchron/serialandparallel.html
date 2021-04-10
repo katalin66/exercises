@@ -19,23 +19,34 @@
       async function serial() {
         const a = await resolve(1);
         const b = await resolve(2);
-        return a + b;
+        const c = await resolve(3);
+        return a + b + c;
       }
 
       async function parallel() {
-        const promiseA = resolve(10);
-        const promiseB = resolve(20);
-        return (await promiseA) + (await promiseB);
+        const promiseA = resolve(1);
+        const promiseB = resolve(2);
+        const promiseC = resolve(3);
+        return (await promiseA) + (await promiseB) + (await promiseC);
       }
 
       async function executionTime(func) {
         const start = performance.now();
-        await func();
+        const result = await func();
         const end = performance.now();
-        return end - start;
+        // return end - start;
+        console.log({
+          functionName: func.name,
+          executionTime: end - start,
+          result
+        })
       }
 // a performance window-n működik, áttettem a js-t html-scriptbe, így ok!
-      executionTime(serial).then(console.log).catch(console.log);
+      // executionTime(serial).then(console.log).catch(console.log);
+      // executionTime(parallel).then(console.log).catch(console.log);
+
+      executionTime(serial);
+      executionTime(parallel);
     </script>
   </body>
 </html>
