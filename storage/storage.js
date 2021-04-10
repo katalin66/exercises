@@ -18,6 +18,6 @@ console.log(localStorage.length);
 localStorage.removeItem('userName'); //törlés, egy adott kulcsú elemet
 localStorage.clear(); //mindent töröl
 
-//session ugyanígy, de csak a lapfül bezáréásáig őrzi meg az adatokat
+//session ugyanígy, de csak a lapfül bezárásáig őrzi meg az adatokat
 
 
